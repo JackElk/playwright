@@ -21,8 +21,8 @@ test.describe('Assertions Tests', async () => {
     })
 
     test('Radio button check', async ({ page }) => {
-        await page.locator('.radioButton').first().check()
-        await expect(page.locator('.radioButton').first()).toBeChecked();
+        await page.locator(".radioButton").first().check()
+        await expect(page.locator(".radioButton").first()).toBeChecked();
     })
 
     test('Input text check', async ({ page }) => {
