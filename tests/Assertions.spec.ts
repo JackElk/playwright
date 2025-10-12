@@ -1,9 +1,6 @@
 import { test, expect } from './fixtures/base-fixtures.js';
 
 test.describe("Assertions Tests", async () => {
-    test.afterAll(async () => {
-        console.log("Run is completed")
-    })
 
     test('Checkbox check', async ({ page }) => {
         await page.locator("#checkBoxOption1").check()

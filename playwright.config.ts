@@ -39,13 +39,26 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+        name: 'setup',
+        testMatch: '**/*.setup.js',
+        teardown: 'teardown',
     },
 
     {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+        name: 'teardown',
+        testMatch: '**/*.teardown.js',
+    },
+
+    {
+        name: 'chromium',
+        use: { ...devices['Desktop Chrome'] },
+        dependencies: ['setup'],
+    },
+
+    {
+        name: 'firefox',
+        use: { ...devices['Desktop Firefox'] },
+        dependencies: ['setup'],
     },
     //
     // {
