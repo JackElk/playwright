@@ -1,0 +1,8 @@
+services:
+  tests:
+    build: .
+    command: ["npx", "playwright", "test"]
+    volumes:
+      - ./tests:/app/tests        # mount tests folder
+      - ./playwright.config.js:/app/playwright.config.js  # mount config
+      - ./test-results:/app/test-results
