@@ -29,8 +29,10 @@ export default defineConfig({
     ],
     /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
     use: {
+        baseURL: 'https://www.saucedemo.com/',
         headless: true,
         viewport: {width: 1280, height: 720},
+        testIdAttribute: 'data-test',
         video: 'retain-on-failure',
         screenshot: 'only-on-failure',
     },
@@ -38,26 +40,13 @@ export default defineConfig({
     /* Configure projects for major browsers */
     projects: [
         {
-            name: 'setup',
-            testMatch: '**/*.setup.js',
-            teardown: 'teardown',
-        },
-
-        {
-            name: 'teardown',
-            testMatch: '**/*.teardown.js',
-        },
-
-        {
             name: 'chromium',
             use: {...devices['Desktop Chrome']},
-            dependencies: ['setup'],
         },
 
         {
             name: 'firefox',
             use: {...devices['Desktop Firefox']},
-            dependencies: ['setup'],
         },
 //
 // {
