@@ -7,8 +7,6 @@ export class CartPage extends BasePage {
         /** @type {Locator} */
         this.cartItemName = page.getByTestId('inventory-item-name');
         /** @type {Locator} */
-        this.checkoutButton = page.getByTestId('checkout');
-        /** @type {Locator} */
         this.removeBackpackFromCartButton = page.getByTestId('remove-sauce-labs-backpack');
         /** @type {Locator} */
         this.cartItem = page.getByTestId('inventory-item');
