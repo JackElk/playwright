@@ -2,17 +2,17 @@ export class BasePage {
     constructor(page) {
         this.page = page;
         /** @type {Locator} */
-        this.cartButton = page.getByTestId('shopping-cart-link');
+        this.cartButton = this.page.getByTestId('shopping-cart-link');
         /** @type {Locator} */
-        this.cartCounter = page.getByTestId('shopping-cart-badge');
+        this.cartCounter = this.page.getByTestId('shopping-cart-badge');
         /** @type {Locator} */
-        this.menuButton = page.locator('#react-burger-menu-btn');
+        this.menuButton = this.page.locator('#react-burger-menu-btn');
         /** @type {Locator} */
-        this.goToInventoryNavigation = page.getByTestId('inventory-sidebar-link');
+        this.goToInventoryNavigation = this.page.getByTestId('inventory-sidebar-link');
         /** @type {Locator} */
-        this.logoutButton = page.getByTestId('logout-sidebar-link');
+        this.logoutButton = this.page.getByTestId('logout-sidebar-link');
         /** @type {Locator} */
-        this.loginButton = page.getByTestId('login-button');
+        this.loginButton = this.page.getByTestId('login-button');
     }
 
     async clickOnCart() {

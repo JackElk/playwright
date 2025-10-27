@@ -5,13 +5,13 @@ export class CartPage extends BasePage {
     constructor(page) {
         super(page);
         /** @type {Locator} */
-        this.cartItemName = page.getByTestId('inventory-item-name');
+        this.cartItemName = this.page.getByTestId('inventory-item-name');
         /** @type {Locator} */
-        this.removeBackpackFromCartButton = page.getByTestId('remove-sauce-labs-backpack');
+        this.removeBackpackFromCartButton = this.page.getByTestId('remove-sauce-labs-backpack');
         /** @type {Locator} */
-        this.cartItem = page.getByTestId('inventory-item');
+        this.cartItem = this.page.getByTestId('inventory-item');
         /** @type {Locator} */
-        this.continueShoppingButton = page.getByTestId('continue-shopping');
+        this.continueShoppingButton = this.page.getByTestId('continue-shopping');
     }
 
     async clickRemoveBackpackFromCartButton() {
